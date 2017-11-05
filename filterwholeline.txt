@@ -1,0 +1,13 @@
+[1. General]
+[2. Trade]
+[3. LocalDefense]
+[4. xtensionxtooltip2]
+|Hchannel:GUILD|h[Guild]|h
+FRIEND_OFFLINE
+FRIEND_ONLINE
+has come online
+has gone offline
+No player named
+has earned the achievement
+Changed Channel
+Left Channel
