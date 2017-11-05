@@ -12,7 +12,7 @@ After installing the npm modules, drop the source chatlog in the project's root 
 
 The run command accepts two parameters, the filenames for the input and output files:
 
-`node app.js --inputFile <rawlogfile.txt> --outputFile <cleanedlogfile.txt>`
+`node app.js --inputFile <rawlogfile.txt> --outputFile <cleanedlogfile.txt>`  
 `node app.js -i <rawlogfile.txt> -o <cleanedlogfile.txt>`
 
 ## Customization
