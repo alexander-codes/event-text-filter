@@ -18,8 +18,6 @@ const fileStream = new lineReader(rawLogFile, lineReadOptions);
 
 const filter = fs.readFileSync('filterwholeline.txt', 'utf-8').toString().split('\n');
 const realmlist = fs.readFileSync('realmlist.txt', 'utf-8').toString().split('\n');
-console.log('REALMS');
-console.log(realmlist);
 
 function removeTimestamp (text) {
   const timestampRegEx = /\d{1,2}\/\d{1,2}\s\d{1,2}:\d{2}:\d{2}.\d{3}\s\s/;
