@@ -7,13 +7,13 @@ const optionDefinitions = [
   { name: 'outputFile', alias: 'o', type: String, multiple: false }
 ];
 const commandLineOptions = commandLineArgs(optionDefinitions);
-let rawLogFile = commandLineOptions.inputFile;
-let editFile = commandLineOptions.outputFile;
+const rawLogFile = commandLineOptions.inputFile;
+const editFile = commandLineOptions.outputFile;
 
 const lineReadOptions = {
   encoding: 'utf8',
   skipEmptyLines: true
-}
+};
 const fileStream = new lineReader(rawLogFile, lineReadOptions);
 
 const filter = fs.readFileSync('filterwholeline.txt', 'utf-8').toString().split('\n');
@@ -42,6 +42,7 @@ function cleanLine (text) {
 
 function isLineValid (text) {
   let containsInvalidPhrase = false;
+
   filter.forEach((entry) => {
     if (text.includes(entry)) {
       containsInvalidPhrase = true;
@@ -62,5 +63,5 @@ fileStream.on('line', (line) => {
 });
 
 fileStream.on('end', () => {
-	console.log(`COMPLETED PROCESSING FILE: ${rawLogFile}`);
+  console.log(`COMPLETED PROCESSING FILE: ${rawLogFile}`);
 });
