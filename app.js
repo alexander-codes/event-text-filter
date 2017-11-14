@@ -53,7 +53,7 @@ function isLineValid (text) {
 }
 
 fileStream.on('error', (err) => {
-  console.log(`FILE STREAM ERROR: ${err}`);
+  console.log(`file stream error ${err}`);
 });
 
 fileStream.on('line', (line) => {
@@ -63,5 +63,5 @@ fileStream.on('line', (line) => {
 });
 
 fileStream.on('end', () => {
-  console.log(`COMPLETED PROCESSING FILE: ${rawLogFile}`);
+  console.log(`completed processing file ${rawLogFile}`);
 });
